@@ -1,0 +1,36 @@
+@use "../util" as u;
+
+.footer {
+  background-color: var(--Black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap, 1.5rem);
+  padding-block-start: 2rem;
+  padding-block-end: 2rem;
+
+  @include u.breakpoint(medium) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 3rem;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap, 1rem);
+    margin-block-start: 2rem;
+
+    @include u.breakpoint(medium) {
+      flex-direction: row;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: center;
+    gap: var(--gap, 2rem);
+    margin-block-end: 2rem;
+  }
+}

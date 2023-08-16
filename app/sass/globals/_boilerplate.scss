@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: var(--ff-body);
+  font-weight: var(--fw-300);
+  font-size: var(--fs-15px);
+  line-height: 1.7;
+  overflow-x: hidden;
+  color: var(--Dark-Gray);
+}

@@ -1,0 +1,134 @@
+@use "../util" as u;
+.interactive {
+  padding-inline: 1.6667rem;
+  margin-block-end: 6.633rem;
+  position: relative;
+
+  &__content {
+    width: 18.8rem;
+    margin-inline: auto;
+    margin-block-start: 3rem;
+    text-align: center;
+    @include u.breakpoint(medium) {
+      width: 35.1333rem;
+      background-color: var(--White);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      padding: 2.6335rem;
+    }
+
+    h2 {
+      padding-block-end: 1.8rem;
+    }
+  }
+}
+
+.creation {
+  margin-block: 6.367rem;
+  &__heading {
+    @include u.breakpoint(medium) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-inline: 5rem;
+      margin-block-end: 2.9333rem;
+    }
+    h2 {
+      text-align: center;
+      margin-block-end: 3.6667rem;
+
+      @include u.breakpoint(medium) {
+        margin-block-end: 0;
+      }
+    }
+    button {
+      display: none;
+
+      @include u.breakpoint(medium) {
+        display: block;
+        font-size: 24px;
+        font-weight: var(--fw-300);
+        text-transform: uppercase;
+        padding: 0.7rem 4rem;
+        background-color: transparent;
+        color: var(--Black);
+        border: 2px solid var(--Black);
+      }
+
+      &:hover {
+        background-color: var(--Black);
+        color: var(--White);
+      }
+    }
+  }
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap, 2rem);
+    margin-inline: 1.5667rem;
+    @include u.breakpoint(medium) {
+      margin-inline: 5rem;
+      align-items: flex-start;
+    }
+
+    .first-row {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap, 2rem);
+      @include u.breakpoint(medium) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .second-row {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap, 2rem);
+
+      @include u.breakpoint(medium) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    picture {
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 3rem;
+      left: 1.5rem;
+      width: 8.5rem;
+
+      @include u.breakpoint(medium) {
+        top: 22rem;
+        left: 2rem;
+      }
+
+      h2 {
+        font-size: 24px;
+        font-weight: var(--fw-300);
+        color: hsla(0, 0%, 100%, 0.7);
+      }
+    }
+
+    button {
+      font-size: 24px;
+      font-weight: var(--fw-300);
+      text-transform: uppercase;
+      padding: 0.7rem 4rem;
+      background-color: transparent;
+      color: var(--Black);
+      border: 2px solid var(--Very-Dark-Gray);
+      margin-block-start: 2.3rem;
+
+      @include u.breakpoint(medium) {
+        display: none;
+      }
+    }
+  }
+}

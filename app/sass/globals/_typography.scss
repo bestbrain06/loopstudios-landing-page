@@ -1,0 +1,30 @@
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+  font-size: 32px;
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-400);
+  text-transform: uppercase;
+  color: var(--Black);
+}
+
+a {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-400);
+  font-size: var(--fs-15px);
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: var(--White);
+}
+
+ul,
+li,
+ol {
+  list-style-type: none;
+}
